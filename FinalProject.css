@@ -769,6 +769,25 @@ button[type="submit"]:active,
   font-weight: 800;
 }
 
+.form .login-message {
+  margin: -12px 0 18px;
+  padding: 11px 13px;
+  border: 1px solid #f0b8bf;
+  border-radius: 11px;
+  background: #fff2f3;
+  color: #a72d3b;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: left;
+  opacity: 1;
+}
+
+.form button:disabled {
+  cursor: wait;
+  opacity: .7;
+}
+
 /* ACCOUNT */
 
 .account-page,
@@ -5111,7 +5130,7 @@ body.is-authenticated .home-footer-nav [data-auth-cart] {
   opacity: .88;
 }
 
-.header nav a[href="home.html"]::before {
+.header nav a[href="index.html"]::before {
   content: "⌂";
 }
 
