@@ -6970,6 +6970,33 @@ textarea:focus-visible {
   padding: 54px 0;
 }
 
+.home-product-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.home-surprise-button {
+  padding: 11px 15px;
+  border: 1px solid rgba(101, 70, 255, .18);
+  border-radius: 999px;
+  background: linear-gradient(120deg, #fff3c9, #f2edff);
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 850;
+  transition: transform var(--fx-speed), box-shadow var(--fx-speed);
+}
+
+.home-surprise-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(52, 31, 105, .12);
+}
+
+.home-surprise-button:disabled {
+  cursor: wait;
+  opacity: .55;
+}
+
 .activity-card {
   position: relative;
   display: flex;
@@ -7096,6 +7123,21 @@ textarea:focus-visible {
 }
 
 @media (max-width: 680px) {
+  .header_inner,
+  .header-inner {
+    width: calc(100% - 36px);
+  }
+
+  .home-product-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .home-surprise-button {
+    padding: 9px 12px;
+  }
+
   .activity-section {
     padding: 30px 0;
   }

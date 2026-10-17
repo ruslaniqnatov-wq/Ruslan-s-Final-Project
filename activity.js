@@ -1,5 +1,5 @@
 (() => {
-    const ACTIVITY_API_URL = "http://195.26.245.5:9505/api/clients/get-details";
+    const ACTIVITY_API_URL = "https://fakerestapi.azurewebsites.net/api/v1/Activities";
     const prompt = document.getElementById("activity-prompt");
     const meta = document.getElementById("activity-meta");
     const status = document.getElementById("activity-status");

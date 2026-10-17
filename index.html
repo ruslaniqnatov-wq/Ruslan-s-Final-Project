@@ -179,13 +179,19 @@
                         </p>
                     </div>
 
-                    <a href="catalog.html" class="all-products">
-                        Все товары <span>→</span>
-                    </a>
+                    <div class="home-product-actions">
+                        <button class="home-surprise-button" id="surprise-product" type="button" disabled>
+                            ✨ Удиви меня
+                        </button>
+                        <a href="catalog.html" class="all-products">
+                            Все товары <span>→</span>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- index.js загружает товары сюда -->
                 <div class="products" id="products"></div>
+                <p class="visually-hidden" id="products-status" role="status" aria-live="polite"></p>
 
             </div>
         </section>
