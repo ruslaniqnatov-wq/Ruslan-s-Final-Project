@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товар — Ruslan's Final Project</title>
+    <link rel="stylesheet" href="FinalProject.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header_inner">
+            <a href="home.html" class="logo">Ruslan's Final Project</a>
+            <nav class="nav" aria-label="Main navigation">
+                <a href="home.html" class="nav_link">Home</a>
+                <a href="catalog.html" class="nav_link">Catalog</a>
+                <a href="about.html" class="nav_link">About</a>
+                <a href="Shop.html" class="nav_link">Contact</a>
+                <a href="#login" class="nav_link">Login</a>
+                <a href="account.html" class="nav_link">My account</a>
+            </nav>
+            <div class="header_action">
+                <a href="cart.html" class="cart-link" data-auth-cart>Cart</a>
+            </div>
+        </div>
+    </header>
+    <main class="container product-page">
+        <a class="back-link product-back-link" href="catalog.html">← Вернуться в каталог</a>
+        <div class="product" id="product" aria-live="polite" aria-busy="true"></div>
+
+        <section class="product-reviews" aria-labelledby="reviews-heading">
+            <div class="reviews-heading">
+                <div>
+                    <span class="eyebrow">МНЕНИЯ ПОКУПАТЕЛЕЙ</span>
+                    <h2 id="reviews-heading">Отзывы о товаре</h2>
+                </div>
+                <div class="reviews-summary" id="reviews-summary" aria-live="polite"></div>
+            </div>
+            <div id="reviews" aria-live="polite" aria-busy="true">
+                <p class="reviews-message">Загружаем отзывы...</p>
+            </div>
+        </section>
+    </main>
+
+<script src="product.js"></script>
+<script src="auth-ui.js"></script>
+</body>
+
+</html>

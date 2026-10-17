@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Get in touch with Ruslan's Final Project." />
+    <title>Contact — Ruslan's Final Project</title>
+    <link rel="stylesheet" href="FinalProject.css" />
+  </head>
+  <body class="shop-page">
+    <header class="header">
+      <div class="container header_inner">
+        <a href="home.html" class="logo">Ruslan's Final Project</a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="home.html" class="nav_link">Home</a>
+          <a href="catalog.html" class="nav_link">Catalog</a>
+          <a href="about.html" class="nav_link">About</a>
+          <a href="Shop.html" class="nav_link active" aria-current="page">Contact</a>
+          <a href="account.html" class="nav_link">My account</a>
+        </nav>
+        <div class="header_action">
+          <a href="cart.html" class="cart-link" data-auth-cart>🛒 Cart</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="shop-main">
+      <div class="container shop-layout">
+        <section class="shop-intro">
+          <span class="eyebrow">WE'RE HERE TO HELP</span>
+          <h1>Write to us<span>.</span></h1>
+          <p>Have a question or need a hand choosing your next device? Send us a message — we'd love to hear from you.</p>
+          <div class="shop-contact-note">
+            <span class="shop-contact-icon" aria-hidden="true">✉</span>
+            <span>
+              <small>EMAIL US</small>
+              <a href="mailto:ruslaniqnatov@gmail.com">ruslaniqnatov@gmail.com</a>
+            </span>
+          </div>
+          <div class="shop-decoration shop-decoration-one" aria-hidden="true">✦</div>
+          <div class="shop-decoration shop-decoration-two" aria-hidden="true">✧</div>
+        </section>
+
+        <section class="shop-form-panel" aria-labelledby="shop-form-heading">
+          <div class="shop-form-heading">
+            <span class="eyebrow">DROP US A LINE</span>
+            <h2 id="shop-form-heading">Let's talk</h2>
+            <p>The V1 API has no contact-message endpoint, so this form prepares an email in your mail app.</p>
+          </div>
+          <form id="shop-contact-form" class="shop-form">
+            <label for="shop-name">Your name</label>
+            <input id="shop-name" name="name" type="text" placeholder="How should we call you?" autocomplete="name" required maxlength="100" />
+
+            <label for="shop-email">Your email</label>
+            <input id="shop-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required maxlength="254" />
+
+            <label for="shop-message">Your message</label>
+            <textarea id="shop-message" name="message" rows="4" placeholder="Tell us how we can help..." required maxlength="2000"></textarea>
+
+            <button class="shop-submit" type="submit">Send message <span aria-hidden="true">↗</span></button>
+            <p id="shop-form-status" class="shop-form-status" role="status" aria-live="polite"></p>
+            <small class="shop-privacy-note">Your message is not submitted to the API or stored on this page.</small>
+          </form>
+        </section>
+      </div>
+
+    </main>
+
+    <footer class="home-footer shop-footer">
+      <div class="container">
+        <div class="home-footer-bottom">
+          <span>© 2026 Ruslan's Final Project</span>
+          <a href="home.html">Back to home ↑</a>
+        </div>
+      </div>
+    </footer>
+    <script src="shop.js"></script>
+    <script src="auth-ui.js"></script>
+  </body>
+</html>

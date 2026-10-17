@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мой аккаунт</title>
+    <link rel="stylesheet" href="FinalProject.css" />
+  </head>
+
+  <body class="account-page">
+    <header class="header">
+      <div class="container header_inner">
+        <a href="home.html" class="logo">Ruslan's Final Project</a>
+
+        <nav class="nav" aria-label="Main navigation">
+          <a href="home.html" class="nav_link">Home</a>
+          <a href="catalog.html" class="nav_link">Catalog</a>
+          <a href="about.html" class="nav_link">About</a>
+          <a href="Shop.html" class="nav_link">Contact</a>
+          <a href="account.html" class="nav_link active" aria-current="page">My account</a>
+        </nav>
+        
+
+        <div class="header_action">
+          <a href="cart.html" class="cart-link" data-auth-cart>Cart</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="account account-dashboard">
+      <div class="container">
+        <div class="account-heading">
+          <div>
+            <span class="eyebrow">ТВОЁ ПРОСТРАНСТВО</span>
+            <h1>Мой аккаунт</h1>
+            <p>Управляй профилем и возвращайся к покупкам в любой момент.</p>
+          </div>
+          <span class="account-heading-mark" aria-hidden="true">✦</span>
+        </div>
+
+        <div class="account-dashboard-grid">
+          <section class="account-profile-panel" aria-labelledby="profile-heading">
+            <div class="account-profile-banner">
+              <span>RUSLAN'S FINAL PROJECT</span>
+              <span class="account-profile-orbit" aria-hidden="true">✧</span>
+            </div>
+            <div class="account-profile-body">
+              <div class="account-avatar" id="profile-avatar" aria-hidden="true">R</div>
+              <div class="account-profile-title">
+                <span class="account-status"><i aria-hidden="true"></i> Аккаунт активен</span>
+                <h2 id="profile-heading">Твой профиль</h2>
+                <p>Личная информация и данные для связи</p>
+              </div>
+
+              <div id="profile" class="account-profile-details" aria-live="polite">
+                <p class="account-loading">Загружаем твой профиль...</p>
+              </div>
+
+              <button class="account-logout" type="button" onclick="logout()">
+                <span aria-hidden="true">↪</span> Выйти из аккаунта
+              </button>
+            </div>
+          </section>
+
+          <aside class="account-quick-panel" aria-label="Быстрые действия">
+            <span class="eyebrow">БЫСТРЫЙ ДОСТУП</span>
+            <h2>Продолжим?</h2>
+            <p>Твои следующие шаги — в одном месте.</p>
+
+            <a class="account-shortcut account-shortcut-catalog" href="catalog.html">
+              <span class="account-shortcut-icon" aria-hidden="true">▦</span>
+              <span><strong>Открыть каталог</strong><small>Найти новое устройство</small></span>
+              <span class="account-shortcut-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="account-shortcut account-shortcut-cart" href="cart.html">
+              <span class="account-shortcut-icon" aria-hidden="true">🛍</span>
+              <span><strong>Моя корзина</strong><small>Посмотреть выбранное</small></span>
+              <span class="account-shortcut-arrow" aria-hidden="true">↗</span>
+            </a>
+          </aside>
+        </div>
+
+        <section class="account-products-panel" aria-labelledby="account-products-heading">
+          <div class="account-products-banner">
+            <div>
+              <span class="eyebrow">ТВОЯ КОЛЛЕКЦИЯ</span>
+              <h2 id="account-products-heading">Мои товары</h2>
+              <p>Только твои товары. Изменения сохраняются в FakeRESTApi и появляются в общем каталоге.</p>
+            </div>
+            <span class="account-products-mark" aria-hidden="true">✦</span>
+          </div>
+
+          <div class="account-products-insights" aria-label="Статистика моих товаров">
+            <article class="account-products-insight account-products-insight-purple">
+              <span class="account-insight-icon" aria-hidden="true">▦</span>
+              <span><small>МОИ ТОВАРЫ</small><strong id="account-products-count">—</strong></span>
+            </article>
+            <article class="account-products-insight account-products-insight-mint">
+              <span class="account-insight-icon" aria-hidden="true">◈</span>
+              <span><small>КАТЕГОРИИ</small><strong id="account-products-categories-count">—</strong></span>
+            </article>
+            <article class="account-products-insight account-products-insight-yellow">
+              <span class="account-insight-icon" aria-hidden="true">↗</span>
+              <span><small>СРЕДНЯЯ ЦЕНА</small><strong id="account-products-average-price">—</strong></span>
+            </article>
+          </div>
+
+          <div class="account-products-toolbar">
+            <div>
+              <strong>Твоя коллекция</strong>
+              <span>Загружается с сервера и доступна в каталоге</span>
+            </div>
+            <div class="account-products-toolbar-actions">
+              <button class="account-products-refresh" id="account-products-refresh" type="button" aria-label="Обновить список товаров">
+                <span aria-hidden="true">⟳</span> Обновить
+              </button>
+              <button class="account-panel-logout" id="account-products-logout" type="button">
+                <span aria-hidden="true">↪</span> Выйти
+              </button>
+              <button class="shop-create-toggle account-product-create" id="account-product-create" type="button" aria-expanded="false" aria-controls="account-product-form-panel">
+                <span aria-hidden="true">＋</span> Создать товар
+              </button>
+            </div>
+          </div>
+
+          <div class="shop-product-form-panel account-product-form-panel" id="account-product-form-panel" hidden>
+            <div class="shop-product-form-heading">
+              <div>
+                <span class="eyebrow">ДЕТАЛИ ТОВАРА</span>
+                <h3 id="account-product-form-title">Создать товар</h3>
+              </div>
+              <button class="shop-form-close" id="account-product-cancel" type="button" aria-label="Отмена">×</button>
+            </div>
+            <form id="account-product-form" class="shop-product-form account-product-form">
+              <label for="account-product-brand">Бренд</label>
+              <input id="account-product-brand" name="brand" type="text" placeholder="Например, Sony" maxlength="120" required />
+
+              <label for="account-product-model">Название / модель</label>
+              <input id="account-product-model" name="model" type="text" placeholder="Например, WH-1000XM5" maxlength="120" required />
+
+              <label for="account-product-price">Цена (AZN)</label>
+              <input id="account-product-price" name="price" type="number" min="0.01" step="0.01" placeholder="299.99" required />
+
+              <label for="account-product-category">Категория</label>
+              <select id="account-product-category" name="categoryId" required disabled>
+                <option value="">Загружаем категории...</option>
+              </select>
+
+              <label for="account-product-image">Ссылка на изображение <span>(необязательно)</span></label>
+              <input id="account-product-image" name="imageUrl" type="url" placeholder="https://example.com/product.jpg" maxlength="1000" />
+
+              <label for="account-product-description">Описание</label>
+              <textarea id="account-product-description" name="description" rows="3" placeholder="Расскажи о товаре..." maxlength="1000"></textarea>
+
+              <div class="shop-product-form-actions">
+                <button class="shop-submit" id="account-product-save" type="submit">Создать товар <span aria-hidden="true">↗</span></button>
+                <button class="shop-product-cancel" id="account-product-cancel-secondary" type="button">Отмена</button>
+              </div>
+              <p class="shop-form-status" id="account-product-form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <p class="shop-form-status account-products-status" id="account-products-status" role="status" aria-live="polite"></p>
+          <div class="account-products-search">
+            <span aria-hidden="true">⌕</span>
+            <input id="account-products-search" type="search" placeholder="Найти свой товар..." aria-label="Поиск по моим товарам" />
+            <label class="visually-hidden" for="account-products-category-filter">Фильтр по категории</label>
+            <select id="account-products-category-filter" aria-label="Фильтр по категории">
+              <option value="">Все категории</option>
+            </select>
+          </div>
+          <div class="shop-product-grid account-product-grid" id="account-product-list" aria-live="polite"></div>
+          <p class="account-products-note">Коллекция загружается по токену авторизации. Редактировать и удалять можно только товары, доступные твоему аккаунту в API.</p>
+        </section>
+
+        <section class="profile-cart account-cart-panel" aria-labelledby="account-cart-heading">
+          <div class="account-cart-heading">
+            <div>
+              <span class="eyebrow">СОХРАНЁННЫЙ ВЫБОР</span>
+              <h2 id="account-cart-heading">Моя корзина</h2>
+            </div>
+            <a href="cart.html">Перейти к корзине <span aria-hidden="true">↗</span></a>
+          </div>
+          <div id="cart-container"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer" id="login">
+      <div class="container">
+        <p>
+          © 2026 Final Project. Все права защищены. Этот сайт создан для
+          демонстрационных целей. Контактная почта: ruslaniqnatov@gmail.com.
+          Время обновления: октябрь 2026. Конфиденциальность: мы не собираем
+          личные данные, кроме случаев, когда вы сами их отправляете. Спасибо,
+          что заглянули!.
+        </p>
+      </div>
+    </footer>
+
+
+    <script src="account.js"></script>
+    <script src="account-products.js"></script>
+    <script src="auth-ui.js"></script>
+  </body>
+</html>
