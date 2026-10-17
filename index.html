@@ -225,6 +225,31 @@
             </div>
         </section>
 
+        <section class="activity-section" aria-labelledby="activity-heading">
+            <div class="container">
+                <div class="activity-card">
+                    <div class="activity-card-copy">
+                        <span class="activity-kicker">ИДЕЯ ДНЯ · FakeREST API</span>
+                        <h2 id="activity-heading">Небольшой перерыв?</h2>
+                        <p>Выбери короткое задание из списка активностей и добавь немного движения в свой день.</p>
+                        <div class="activity-prompt" id="activity-prompt" aria-live="polite">
+                            Загружаем идею...
+                        </div>
+                        <div class="activity-meta" id="activity-meta"></div>
+                        <button class="activity-next" id="activity-next" type="button" disabled>
+                            Другая идея <span aria-hidden="true">↗</span>
+                        </button>
+                        <p class="activity-status" id="activity-status" role="status"></p>
+                    </div>
+                    <div class="activity-art" aria-hidden="true">
+                        <span class="activity-art-orbit"></span>
+                        <span class="activity-art-spark">✦</span>
+                        <span class="activity-art-number">01</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <!-- ADVANTAGES -->
         <section class="advantages-section" id="advantages">
@@ -323,6 +348,7 @@
     </footer>
 
     <script src="index.js"></script>
+    <script src="activity.js"></script>
     <script src="auth-ui.js"></script>
 </body>
 </html>
