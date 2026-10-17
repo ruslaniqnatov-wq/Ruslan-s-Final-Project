@@ -783,20 +783,6 @@ button[type="submit"]:active,
   opacity: 1;
 }
 
-.form .register-success {
-  margin: -12px 0 18px;
-  padding: 11px 13px;
-  border: 1px solid #a8dfc5;
-  border-radius: 11px;
-  background: #effbf5;
-  color: #176b49;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1.5;
-  text-align: left;
-  opacity: 1;
-}
-
 .form button:disabled {
   cursor: wait;
   opacity: .7;
@@ -5764,6 +5750,7 @@ body.is-authenticated .home-footer-nav [data-auth-cart] {
   font-size: 12px;
   line-height: 1.65;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   -webkit-line-clamp: 2;
 }
 
